@@ -1,15 +1,16 @@
 # 🧮 Calculator App
 
-A simple and responsive calculator built using **HTML, CSS, and JavaScript**. This project performs basic arithmetic operations with a clean user interface.
+A simple and responsive calculator built using **HTML, CSS, and JavaScript**. This project supports both mouse and keyboard input with real-time calculations.
 
 ---
 
 ## 🚀 Features
 
-* Perform basic operations: Addition, Subtraction, Multiplication, Division
-* Clear and delete functionality
+* Basic operations: Addition, Subtraction, Multiplication, Division, Modulus
+* Keyboard support (numbers, operators, Enter, Backspace, Delete, Escape)
+* Clear (AC) and Delete (DEL) functionality
+* Error handling for invalid expressions
 * Responsive design (works on desktop and mobile)
-* Real-time input display
 
 ---
 
@@ -34,10 +35,15 @@ Calculator/
 
 ## ▶️ How to Run Locally
 
-1. Download or clone this repository
+1. Clone this repository
 2. Open the project folder
-3. Double-click on `index.html`
-4. The calculator will open in your browser
+3. Open `index.html` in your browser
+
+---
+
+## 🌐 Live Demo
+
+https://kumar-gautam-sah.github.io/Calculator/
 
 ---
 
