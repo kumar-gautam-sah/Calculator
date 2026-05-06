@@ -6,9 +6,13 @@ let arr = Array.from(buttons);
 arr.forEach(button => {
     button.addEventListener('click' , (e) =>{
         if(e.target.innerHTML == '='){
-            string = eval(string);
-            input.value = string;
-        }
+    try {
+        string = eval(string);
+    } catch {
+        string = "Error";
+    }
+    input.value = string;
+    }
 
         else if(e.target.innerHTML == 'AC'){
             string = "";
@@ -27,3 +31,39 @@ arr.forEach(button => {
         
     })
 })
+// taking input from keyboard.
+document.addEventListener("keydown", (e) => {
+    e.preventDefault(); // CRITICAL FIX
+
+    const key = e.key;
+
+    if (!isNaN(key)) {
+        string += key;
+    }
+
+    else if (["+", "-", "*", "/" , "%"].includes(key)) {
+        string += key;
+    }
+
+    else if (key === ".") {
+        string += ".";
+    }
+
+    else if (key === "Enter") {
+        try {
+            string = eval(string);
+        } catch {
+            string = "Error";
+        }
+    }
+
+    else if (key === "Backspace" || key === "Delete") {
+        string = string.substring(0, string.length - 1);
+    }
+
+    else if (key === "Escape") {
+        string = "";
+    }
+
+    input.value = string;
+});
